@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/radiodan/wpa-cli-ruby.git
-  revision: 1b92f74e20460911b82d10cacf591344de91b556
+  revision: 345047d0d3f28683742545db8abe7e386ca6460f
   specs:
     wpa_cli_ruby (0.0.1)
 
