@@ -13,7 +13,11 @@ class WpaCliWeb < Sinatra::Base
   end
 
   def wpa_cli_client
-    WpaCli.new(DummyWpaCliWrapper.new)
+    if ENV['RACK_ENV'] == "development"
+      WpaCli.new(DummyWpaCliWrapper.new)
+    else
+      WpaCli.new
+    end
   end
 
   template :networks do
