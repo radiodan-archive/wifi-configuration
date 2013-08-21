@@ -3,22 +3,28 @@ require 'bundler/setup'
 
 require 'sinatra/base'
 require 'wpa_cli_ruby'
-require_relative 'lib/network_list'
+require_relative 'lib/access_point_list'
 
 class WpaCliWeb < Sinatra::Base
+  include WpaCliRuby
+
+  def wpa_cli_client
+    WpaCli.new(DummyWpaCliWrapper.new)
+  end
+
   template :networks do
     <<-eos
       <ul>
-      <% @networks.each do |network| %>
-        <li><%= network.ssid%> (<%= network.signal_level %>)</li>
+      <% @access_points.each do |ap| %>
+        <li><%= ap.ssid%> (<%= ap.signal_level %>)</li>
       <% end %>
       </ul>
     eos
   end
 
   get '/networks' do
-    network_list = NetworkList.new
-    @networks = network_list.networks
+    access_point_list = AccessPointList.new(wpa_cli_client)
+    @access_points = access_point_list.access_points
     erb :networks
   end
 
