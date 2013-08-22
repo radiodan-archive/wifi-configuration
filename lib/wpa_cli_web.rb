@@ -38,6 +38,21 @@ class WpaCliWeb < Sinatra::Base
     eos
   end
 
+  template :layout do
+    <<-eos
+      <html>
+        <head></head>
+        <body>
+          <header>
+            <p>Radiodan</p>
+            <p><%= @host %></p>
+          </header>
+          <%= yield %>
+        </body>
+      </html>
+    eos
+  end
+
   template :networks do
     <<-eos
       <ul>
