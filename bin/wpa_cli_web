@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'thin'
+
+# WpaCliWeb daemon command line interface script.
+# Run wpa_cli_web -h to get more usage.
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'wpa_cli_web.rb'))
+rackup_file = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'wpa_cli_web', 'config.ru'))
+
+argv = ARGV
+argv << ["-R", rackup_file] unless ARGV.include?("-R")
+argv << ["-p", "3000"] unless ARGV.include?("-p")
+argv << ["-e", "production"] unless ARGV.include?("-p")
+Thin::Runner.new(argv.flatten).run!
