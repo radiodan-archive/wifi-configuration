@@ -1,9 +1,6 @@
-require 'rubygems'
-require 'bundler/setup'
-
 require 'sinatra/base'
 require 'wpa_cli_ruby'
-require_relative 'lib/access_point_list'
+require_relative 'wpa_cli_web/access_point_list'
 
 class WpaCliWeb < Sinatra::Base
   include WpaCliRuby
