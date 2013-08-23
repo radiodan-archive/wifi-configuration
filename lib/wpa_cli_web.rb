@@ -47,9 +47,14 @@ class WpaCliWeb < Sinatra::Base
           <link rel="stylesheet" href="/bower_components/house-style/house-style.min.css">
         </head>
         <body>
-          <header class="grid">
-            <p class="grid-col grid-8">Radiodan</p>
-            <p class="grid-col grid-4"><%= @host %></p>
+          <header class="masthead">
+            <div class="grid">
+              <div class="grid-col grid-10">
+                <span class="masterbrand">BBC</span>
+                <span class="dept">Radiodan</span>
+              </div>
+              <div class="grid-col grid-2"><%= @host %></div>
+            </div><!-- .grid -->
           </header>
           <div class="grid">
           <%= yield %>

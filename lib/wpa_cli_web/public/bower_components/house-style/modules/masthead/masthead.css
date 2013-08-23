@@ -1,0 +1,23 @@
+.masthead {
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  background-color: #333;
+
+  font-size: 19px;
+}
+
+.masterbrand {
+  display: inline-block;
+  width: 73px;
+  height: 20px;
+  line-height: 20px;
+
+  margin-right: 1px;
+
+  background-image: url(./bbc-blocks-white.png);
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
