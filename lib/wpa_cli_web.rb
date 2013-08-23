@@ -17,6 +17,23 @@ class WpaCliWeb < Sinatra::Base
     end
   end
 
+  template :index do
+    <<-eos
+    <html>
+       <head>
+          <title>Network Authentication Required</title>
+          <meta http-equiv="refresh"
+                content="0; url=/access_points">
+       </head>
+       <body>
+          <p>You need to <a href="https://login.example.net/">
+          authenticate with the local network</a> in order to gain
+          access.</p>
+       </body>
+    </html>
+    eos
+  end
+
   template :networks do
     <<-eos
       <ul>
@@ -44,6 +61,11 @@ class WpaCliWeb < Sinatra::Base
         <input type="submit" value="Save" />
       </form>
     eos
+  end
+
+  get '/' do
+    status 511
+    erb :index, :layout => false
   end
 
   get '/access_points' do
