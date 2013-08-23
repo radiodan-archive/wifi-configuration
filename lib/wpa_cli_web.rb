@@ -7,6 +7,7 @@ class WpaCliWeb < Sinatra::Base
 
   configure do
     set :method_override, true
+    set :public_folder, File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
   end
 
   def wpa_cli_client
@@ -41,13 +42,18 @@ class WpaCliWeb < Sinatra::Base
   template :layout do
     <<-eos
       <html>
-        <head></head>
+        <head>
+          <title>Wi-Fi Configuration</title>
+          <link rel="stylesheet" href="/bower_components/house-style/house-style.min.css">
+        </head>
         <body>
-          <header>
-            <p>Radiodan</p>
-            <p><%= @host %></p>
+          <header class="grid">
+            <p class="grid-col grid-8">Radiodan</p>
+            <p class="grid-col grid-4"><%= @host %></p>
           </header>
+          <div class="grid">
           <%= yield %>
+          </div>
         </body>
       </html>
     eos
@@ -55,7 +61,7 @@ class WpaCliWeb < Sinatra::Base
 
   template :networks do
     <<-eos
-      <ul>
+      <ul class="grid-col grid-12">
       <% @access_points.each do |ap| %>
         <li><%= ap.ssid %> (<%= ap.signal_level %>)
             <form method="post" action="/networks">
@@ -70,7 +76,7 @@ class WpaCliWeb < Sinatra::Base
 
   template :networks_edit do
     <<-eos
-      <h1><%= @ssid %></h1>
+      <h1 class="grid-col grid-12"><%= @ssid %></h1>
       <form method="post" action="/networks/<%= @id %>">
         <input type="hidden" name="_method" value="put" />
         <input type="hidden" name="ssid" value="<%= @ssid %>" />

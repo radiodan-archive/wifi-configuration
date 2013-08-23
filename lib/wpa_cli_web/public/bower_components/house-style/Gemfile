@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+group :development do
+  gem "guard-livereload", "~> 1.4.0"
+  gem "guard-webrick", "~> 0.1.4"
+end

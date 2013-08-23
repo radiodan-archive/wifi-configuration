@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="debugx">
+  <head>
+    <title>Grid - IRFS Components</title>
+    <link rel="stylesheet" href="../../vendor/normalize-css/normalize.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: block;
+        height: 33px;
+        line-height: 33px;
+      }
+
+      .logo {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .logo:before {
+        content: " ";
+        display: inline-block;
+        width: 74px;
+        height: 21px;
+        vertical-align: middle;
+        background-color: #000;
+      }
+
+      header .group {
+        display: none;
+        margin: 0;
+        line-height: 33px;
+      }
+
+      header > .logo {
+        display: inline-block !important;
+      }
+
+      /* Group 1 */
+      @media (max-width: 399px) {
+        header .group-2 {
+          display: inline-block;
+        }
+      }
+
+      /* Group 2 */
+      @media (min-width: 400px) and (max-width: 599px) {
+        header .group-2 {
+          display: inline-block;
+        }
+      }
+
+      /* Group 3 */
+      @media (min-width: 600px) and (max-width: 1007px) {
+        header .group-3 {
+          display: inline-block;
+        }
+      }
+
+      /* Group 4b - flexible */
+      @media (min-width: 1008px) and (max-width: 1280px) {
+        header .group-4b {
+          display: inline-block;
+        }
+      }
+
+      /* Group 4a - fixed */
+      @media (min-width: 1281px) {
+        header .group-4a {
+          display: inline-block;
+        }
+      }
+
+      .images > div {
+        margin-bottom: 26px;
+      }
+
+      .images > div > .image {
+        display: block;
+        background-color: #fff;
+        margin-bottom: 12px;
+        outline: 1px solid #dbdbdb;
+      }
+
+      .grid-2 .image {
+        height: 109px;
+      }
+
+      .grid-3 .image {
+        height: 168.75px;
+      }
+
+      .images {
+        font-size: 14px;
+        line-height: 18px;
+
+        color: #4d4d4d;
+        margin-bottom: 36px;
+      }
+
+      .images .title {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .images .synopsis {
+      }
+      
+      .images .meta {
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body class="grid">
+    <div class="grid-row">
+      <header class="grid-col grid-12">
+          <span class="logo"></span>
+          <h2 class="group group-1">Group 1</h2>
+          <h2 class="group group-2">Group 2</h2>
+          <h2 class="group group-3">Group 3</h2>
+          <h2 class="group group-4a">Group 4a</h2>
+          <h2 class="group group-4b">Group 4b</h2>
+      </header>
+
+      <div class="grid-row images">
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-2">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+      </div><!-- .grid-row -->
+
+      <div class="grid-row images">
+        <div class="grid-col grid-3">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-3">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-3">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+        <div class="grid-col grid-3">
+          <span class="image"> </span>
+          <div class="meta">
+            <span class="title">Brand title</span>
+            <span class="synopsis">Drama set during the War of the Roses, one of the bloodiest wars in English history.</span>
+          </div>
+        </div>
+      </div><!-- .grid-row -->
+
+    </div><!-- .grid-row -->
+  </body>
+</html>

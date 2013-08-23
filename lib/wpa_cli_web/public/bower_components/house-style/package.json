@@ -1,0 +1,17 @@
+{
+  "name": "house-style",
+  "version": "0.0.0",
+  "description": "BBC Research & Development House Style",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BBC",
+  "license": "Apache v2",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}
