@@ -21,23 +21,6 @@ class WpaCliWeb < Sinatra::Base
     @host = request.host_with_port
   end
 
-  template :index do
-    <<-eos
-    <html>
-       <head>
-          <title>Network Authentication Required</title>
-          <meta http-equiv="refresh"
-                content="0; url=//<%= @host %>/access_points">
-       </head>
-       <body>
-          <p>You need to <a href="//<%= @host %>/access_points">
-          authenticate with the local network</a> in order to gain
-          access.</p>
-       </body>
-    </html>
-    eos
-  end
-
   template :networks do
     <<-eos
       <ul>
@@ -68,8 +51,7 @@ class WpaCliWeb < Sinatra::Base
   end
 
   get '/' do
-    status 511
-    erb :index, :layout => false
+    redirect '/access_points'
   end
 
   get '/access_points' do
