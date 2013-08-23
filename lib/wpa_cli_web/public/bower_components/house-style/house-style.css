@@ -433,6 +433,24 @@ a {
 .clearfix:after {
     clear: both;
 }
+.btn {
+  border: none;
+}
+
+.btn-with-text {
+  min-width: 180px;
+  height: 33px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: #2aaf00;
+  font-weight: bold;
+}
+
+.btn-with-text:hover {
+  background-color: #657061;
+}
 .grid {
   margin-left: auto;
   margin-right: auto;
@@ -606,4 +624,118 @@ a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+.panel-full-height {
+  display: table;
+}
+
+.panel-full-height > .panel {
+  display: table-cell;
+  vertical-align: top;
+  float: none;
+}
+
+.panel {
+  background-color: #fff;
+}
+
+.panel.control-panel {
+  background-color: #e0e6e9;
+}
+
+.panel.control-panel .hd {
+  color: #4d4d4d;
+}
+
+.panel-border {
+  border-top: 1px solid #adadad;
+  padding-top: 28px;
+}
+
+.panel .hd {
+  margin: 0.67em 0;
+}
+
+.panel .hd {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6 {
+  font-size: inherit;
+}
+
+.panel .hd > * {
+  margin: 0;
+}
+
+.panel .hd .sep {
+  display: inline-block;
+  border-left: 1px solid #000;
+  padding-left: 8px;
+}
+
+.panel .intro {
+  font-size: 18px;
+}
+
+/* Group 2 */
+@media (min-width: 400px) and (max-width: 599px) {
+
+  .panel-full-height {
+    display: block;
+  }
+
+  .panel-full-height > .panel {
+    display: block;
+  }
+}
+.project-header {
+  /*height: 83px;*/
+  min-height: 83px;
+  line-height: 83px;
+
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.project-header > div {
+  display: inline-block;
+}
+
+.ph-with-toolbar {
+  text-align: right;
+}
+
+.ph-with-toolbar > div {
+  float: left;
+}
+
+.ph-with-toolbar > .ph-toolbar {
+  float: none;
+}
+
+/* Group 2 */
+@media (min-width: 400px) and (max-width: 599px) {
+  .project-header > div {
+    line-height: 41px;
+    margin: 10px 0;
+  }
+
+  .project-header > * {
+    float: none;
+    text-align: left;
+  }
+}
+.table td,
+.table th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
 }

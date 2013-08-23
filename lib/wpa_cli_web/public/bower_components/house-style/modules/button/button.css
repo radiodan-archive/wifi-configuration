@@ -1,0 +1,18 @@
+.btn {
+  border: none;
+}
+
+.btn-with-text {
+  min-width: 180px;
+  height: 33px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: #2aaf00;
+  font-weight: bold;
+}
+
+.btn-with-text:hover {
+  background-color: #657061;
+}

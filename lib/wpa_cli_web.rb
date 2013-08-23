@@ -66,16 +66,23 @@ class WpaCliWeb < Sinatra::Base
 
   template :networks do
     <<-eos
-      <ul class="grid-col grid-12">
+      <table class="table grid-col grid-12">
+        <tr>
+          <th>Name</th>
+          <th>Connect</th>
+        </tr>
       <% @access_points.each do |ap| %>
-        <li><%= ap.ssid %> (<%= ap.signal_level %>)
+        <tr>
+          <td><%= ap.ssid %></td>
+          <td>
             <form method="post" action="/networks">
               <input type="hidden" name="ssid" value="<%= ap.ssid %>" />
-              <input type="submit" value="Connect" />
+              <input class="btn btn-with-text" type="submit" value="Connect" />
             </form>
-        </li>
+          </td>
+        </tr>
       <% end %>
-      </ul>
+      </table>
     eos
   end
 

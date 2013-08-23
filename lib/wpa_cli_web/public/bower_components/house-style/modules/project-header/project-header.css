@@ -1,0 +1,37 @@
+.project-header {
+  /*height: 83px;*/
+  min-height: 83px;
+  line-height: 83px;
+
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.project-header > div {
+  display: inline-block;
+}
+
+.ph-with-toolbar {
+  text-align: right;
+}
+
+.ph-with-toolbar > div {
+  float: left;
+}
+
+.ph-with-toolbar > .ph-toolbar {
+  float: none;
+}
+
+/* Group 2 */
+@media (min-width: 400px) and (max-width: 599px) {
+  .project-header > div {
+    line-height: 41px;
+    margin: 10px 0;
+  }
+
+  .project-header > * {
+    float: none;
+    text-align: left;
+  }
+}
