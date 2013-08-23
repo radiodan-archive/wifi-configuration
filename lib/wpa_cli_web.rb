@@ -17,16 +17,20 @@ class WpaCliWeb < Sinatra::Base
     end
   end
 
+  before do
+    @host = request.host_with_port
+  end
+
   template :index do
     <<-eos
     <html>
        <head>
           <title>Network Authentication Required</title>
           <meta http-equiv="refresh"
-                content="0; url=/access_points">
+                content="0; url=//<%= @host %>/access_points">
        </head>
        <body>
-          <p>You need to <a href="https://login.example.net/">
+          <p>You need to <a href="//<%= @host %>/access_points">
           authenticate with the local network</a> in order to gain
           access.</p>
        </body>
