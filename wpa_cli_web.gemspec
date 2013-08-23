@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "wpa_cli_web"
-  spec.version       = "0.0.1"
-  spec.authors       = ["Chris Lowis"]
+  spec.version       = "0.0.2"
+  spec.authors       = ["Chris Lowis", "Andrew Nicolaou"]
   spec.email         = ["chris.lowis@gmail.com"]
   spec.description   = %q{Web interface for configuring wifi using wpa_cli}
   spec.summary       = %q{Web interface for configuring wifi using wpa_cli}
