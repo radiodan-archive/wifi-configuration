@@ -32,7 +32,7 @@ class WpaCliWeb < Sinatra::Base
     eos
   end
 
-  template :networks_edit do 
+  template :networks_edit do
     <<-eos
       <h1><%= @ssid %></h1>
       <form method="post" action="/networks/<%= @id %>">
@@ -78,7 +78,7 @@ class WpaCliWeb < Sinatra::Base
     else
       wpa_cli_client.set_network(id, "key_mgmt", "NONE")
     end
-    wpa_cli_client.enable_network(id)
+    wpa_cli_client.set_network(id, "disabled", 0)
     wpa_cli_client.save_config
 
     redirect "/restart"
