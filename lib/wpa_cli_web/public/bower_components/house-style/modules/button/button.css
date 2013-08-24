@@ -16,3 +16,11 @@
 .btn-with-text:hover {
   background-color: #657061;
 }
+
+.btn-destructive {
+  background-color: hsl(2, 75%, 50%);
+}
+
+.btn-destructive:hover {
+  background-color: hsl(2, 75%, 30%);
+}

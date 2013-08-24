@@ -1,4 +1,4 @@
-/*! house-style 23-08-2013 */
+/*! house-style 24-08-2013 */
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -450,6 +450,14 @@ a {
 
 .btn-with-text:hover {
   background-color: #657061;
+}
+
+.btn-destructive {
+  background-color: hsl(2, 75%, 50%);
+}
+
+.btn-destructive:hover {
+  background-color: hsl(2, 75%, 30%);
 }
 .grid {
   margin-left: auto;
