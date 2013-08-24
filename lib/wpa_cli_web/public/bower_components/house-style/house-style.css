@@ -1,4 +1,5 @@
 /*! house-style 24-08-2013 */
+
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -21,7 +22,7 @@ main,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 /**
@@ -31,7 +32,7 @@ summary {
 audio,
 canvas,
 video {
-    display: inline-block;
+  display: inline-block;
 }
 
 /**
@@ -40,8 +41,8 @@ video {
  */
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+  display: none;
+  height: 0;
 }
 
 /**
@@ -49,7 +50,7 @@ audio:not([controls]) {
  */
 
 [hidden] {
-    display: none;
+  display: none;
 }
 
 /* ==========================================================================
@@ -63,9 +64,12 @@ audio:not([controls]) {
  */
 
 html {
-    font-family: sans-serif; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /**
@@ -73,7 +77,7 @@ html {
  */
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -85,7 +89,7 @@ body {
  */
 
 a:focus {
-    outline: thin dotted;
+  outline: thin dotted;
 }
 
 /**
@@ -94,7 +98,7 @@ a:focus {
 
 a:active,
 a:hover {
-    outline: 0;
+  outline: 0;
 }
 
 /* ==========================================================================
@@ -107,8 +111,8 @@ a:hover {
  */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /**
@@ -116,7 +120,7 @@ h1 {
  */
 
 abbr[title] {
-    border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 /**
@@ -125,7 +129,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /**
@@ -133,7 +137,7 @@ strong {
  */
 
 dfn {
-    font-style: italic;
+  font-style: italic;
 }
 
 /**
@@ -141,9 +145,10 @@ dfn {
  */
 
 hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
 
 /**
@@ -151,8 +156,8 @@ hr {
  */
 
 mark {
-    background: #ff0;
-    color: #000;
+  background: #ff0;
+  color: #000;
 }
 
 /**
@@ -163,8 +168,8 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
-    font-size: 1em;
+  font-family: monospace, serif;
+  font-size: 1em;
 }
 
 /**
@@ -172,7 +177,7 @@ samp {
  */
 
 pre {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 /**
@@ -180,7 +185,7 @@ pre {
  */
 
 q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /**
@@ -188,7 +193,7 @@ q {
  */
 
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -197,18 +202,18 @@ small {
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 /* ==========================================================================
@@ -220,7 +225,7 @@ sub {
  */
 
 img {
-    border: 0;
+  border: 0;
 }
 
 /**
@@ -228,7 +233,7 @@ img {
  */
 
 svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -240,7 +245,7 @@ svg:not(:root) {
  */
 
 figure {
-    margin: 0;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -252,9 +257,9 @@ figure {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /**
@@ -263,8 +268,10 @@ fieldset {
  */
 
 legend {
-    border: 0; /* 1 */
-    padding: 0; /* 2 */
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -277,9 +284,12 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
 }
 
 /**
@@ -289,7 +299,7 @@ textarea {
 
 button,
 input {
-    line-height: normal;
+  line-height: normal;
 }
 
 /**
@@ -301,7 +311,7 @@ input {
 
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -313,11 +323,14 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],
+/* 1 */
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
 }
 
 /**
@@ -326,7 +339,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 /**
@@ -336,8 +349,12 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -347,10 +364,12 @@ input[type="radio"] {
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
 }
 
 /**
@@ -360,7 +379,7 @@ input[type="search"] {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /**
@@ -369,8 +388,8 @@ input[type="search"]::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /**
@@ -379,8 +398,10 @@ input::-moz-focus-inner {
  */
 
 textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
 }
 
 /* ==========================================================================
@@ -392,8 +413,8 @@ textarea {
  */
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
@@ -408,6 +429,7 @@ a {
 }
 
 /* TOOD: - figure out why inputs don't inherit from body */
+
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -424,15 +446,19 @@ a {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
+
 .btn {
   border: none;
 }
@@ -442,7 +468,6 @@ a {
   height: 33px;
   line-height: 32px;
   text-transform: uppercase;
-
   color: #fff;
   background-color: #2aaf00;
   font-weight: bold;
@@ -459,13 +484,14 @@ a {
 .btn-destructive:hover {
   background-color: hsl(2, 75%, 30%);
 }
+
 .grid {
   margin-left: auto;
   margin-right: auto;
-
   /* Group 1 margin */
   padding: 0;
-
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -478,16 +504,16 @@ a {
   outline: 1px solid red;
 }
 
-.grid:before, 
+.grid:before,
 .grid:after {
-    content: '';
-    display: block;
-    height: 0;
-    overflow: hidden;
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
 }
 
 .grid:after {
-    clear: both;
+  clear: both;
 }
 
 .grid-row {
@@ -495,13 +521,15 @@ a {
   padding: 0;
 }
 
-.debug .grid-row {
-}
+
 
 .grid-col {
   float: left;
   padding: 0 4px 0 4px;
-  box-sizing: border-box; /* IE8+ support only */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* IE8+ support only */
 }
 
 .grid-col:first-child {
@@ -571,6 +599,7 @@ a {
 }
 
 /* Group 2 */
+
 @media (min-width: 400px) {
   .grid {
     max-width: 599px;
@@ -587,6 +616,7 @@ a {
 }
 
 /* Group 3 */
+
 @media (min-width: 600px) {
   .grid {
     max-width: 1007px;
@@ -598,6 +628,7 @@ a {
 }
 
 /* Group 4 - flexible */
+
 @media (min-width: 1008px) {
   .grid {
     max-width: 1280px;
@@ -605,17 +636,93 @@ a {
 }
 
 /* Group 5 - fixed */
+
 @media (min-width: 1281px) {
   .debug .grid {
     background: transparent url(grid.png) no-repeat 50% 50%;
   }
-} 
+}
+
+.loading {
+  display: inline-block;
+  background: transparent url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjQxcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMCAwIDQxIDQwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDx0aXRsZT5TbGljZSAxPC90aXRsZT4KICAgIDxkZXNjcmlwdGlvbj5DcmVhdGVkIHdpdGggU2tldGNoIChodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gpPC9kZXNjcmlwdGlvbj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlIDEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJnMzIiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzcuNSwzMCBMMzMuMTY4NzUsMjcuNDk4NzUgQzM0LjQ0ODc1LDI1LjI5IDM1LjE5MjUsMjIuNzM2MjUgMzUuMTkyNSwyMC4wMDc1IEMzNS4xOTI1LDExLjczNjI1IDI4LjQ2Mzc1LDUuMDA3NSAyMC4xOTI1LDUuMDA3NSBDMTEuOTIxMjUsNS4wMDc1IDUuMTkyNSwxMS43MzYyNSA1LjE5MjUsMjAuMDA3NSBDNS4xOTI1LDI4LjI3NzUgMTEuOTIxMjUsMzUuMDA3NSAyMC4xOTI1LDM1LjAwNzUgTDIwLjE5MjUsNDAuMDA3NSBDOS4xNDYyNSw0MC4wMDc1IDAuMTkyNSwzMS4wNTI1IDAuMTkyNSwyMC4wMDc1IEMwLjE5MjUsOC45NjEyNSA5LjE0NjI1LDAuMDA3NSAyMC4xOTI1LDAuMDA3NSBDMzEuMjM4NzUsMC4wMDc1IDQwLjE5MjUsOC45NjEyNSA0MC4xOTI1LDIwLjAwNzUgQzQwLjE5MjUsMjMuNjUxMjUgMzkuMjAyNSwyNy4wNTc1IDM3LjUsMzAiIGlkPSJwYXRoMzQiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==) no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -webkit-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.loading.is-inactive {
+  opacity: 0;
+}
+
+.loading.is-active {
+  opacity: 1;
+}
+
+.loading-32 {
+  width: 32px;
+  height: 32px;
+  margin: 1px;
+}
+
+.loading-20 {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+}
+
+.loading-16 {
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+}
+
+.loading-13 {
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .masthead {
   height: 60px;
   line-height: 60px;
   color: #fff;
   background-color: #333;
-
   font-size: 19px;
 }
 
@@ -624,15 +731,13 @@ a {
   width: 73px;
   height: 20px;
   line-height: 20px;
-
   margin-right: 1px;
-
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MjYyQTNFNUU2RUIxMUUyODg3RUI1NkVFQjU2OUMwOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MjYyQTNFNkU2RUIxMUUyODg3RUI1NkVFQjU2OUMwOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQyNjJBM0UzRTZFQjExRTI4ODdFQjU2RUVCNTY5QzA5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQyNjJBM0U0RTZFQjExRTI4ODdFQjU2RUVCNTY5QzA5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+48upBQAAA7RJREFUeNq8mG1ojWEYx3d29no2ttmYbZItY/hCaBoS84GIsiXvipRs9kn7QEPZFwoJ8UEsfBAiQ1KaRBgyeSlZi3mZzczrnLNxtvlf9X/q7mlnnpf7cdWvc59zd+77fv73dV/XdT++PliUN9YIxrBdB2Z7MMcDUMh2A5joxYNEgw6PRPqitL95NMfXCG2d1hEzQOd90Azi+F08zgdyuGNxGhbwBLwCMRzb8OqhYBJI1vzAreAxeAo+cvwCMB5MAAn9/SmSSLLYA+ASFx9WRErgwPvAdJeLPgGOsR1WRIoHI8AuUKpBnHdgLzgDvoMupc8PAtz8laAcpFoRSSxEZJAsCtQNPjEWLAG1SkxwYrLYINs5XM9vzvESrGKfG6GugzLQxO+DQS5I51wt4DPnqwIzwSxzTBooXonlg3vgGY9gJUjkgxzVEBON43WDx+Ah2M/dlE3Zw08ndgusoUDiLavBRQb526CenAIlIBv0RlrkQCa7mwlSuAM7wTj2vdAUK8RbM7jL4lGbwVT2vQXtDoP6dm7mIHAQnARzeJwNy6anngfnQJ7VmKSazyTmByVzjdIYVP2mo25kXRFviIPxroK7bG8C6yz8p8hO4FYtSJf00XNqmPUyGeR02B/wCKSxvjrL453E4x2wOZ4cz5tMBiLwBjeLsyLSazCfmUcE6+HvFWCGxpqqhBsRomhia8EyB+N1gvds51J814HzX8fNz7oolXFDbAdYD35qEMmYI5bjGyn4OFjEjbJjYUXoGLeLszKABLILdHmJ/G+YIWqIBMFDLhcjR+IyGM45pNC7Bo4whZfzCCZZHC9ZiWPN9E5PPSmexaOINRrMBYfBPPbXsmp2u1n5TAR5LFKrwUb2SwC+Y2O8JCUIt3KNnooU1V/toOxUmAtxa/3NkaEkjzab4y3l5kZR8DoL/3nOxGFbJFn8D7pskJfV0+AK+6V+GqtBoF/MSkHOZxw3o9gssDmmXGu2Mky0sHqvZmHZawrycoPYAhYzy1qOSX3KK48iRdAuek43g3kZC0AnZszRzmMcy9+6eVXoZL9kvskOxl9BwSsZ56oYP7NJiMVqh/IWwWdHpGilhjG7YCLjU4XLWsmniNVk6ouj+HKt2GYqNu0UqGX0wt2s99pIg0mHYaAYTLMjUilrjIDyIL2sOQp4EUxxecwW8MoQrwjWw+yUzwCepSHeFZN63hEbufl+Ps8UXmpH2ikBZMHLiZe2kPwvK3Ty1iKarwy8MPW+lerRHGkR2jot/a8AAwD2R9W1w4V4gAAAAABJRU5ErkJggg==);
-
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .panel-full-height {
   display: table;
 }
@@ -694,8 +799,8 @@ a {
 }
 
 /* Group 2 */
-@media (min-width: 400px) and (max-width: 599px) {
 
+@media (min-width: 400px) and (max-width: 599px) {
   .panel-full-height {
     display: block;
   }
@@ -704,11 +809,11 @@ a {
     display: block;
   }
 }
+
 .project-header {
   /*height: 83px;*/
   min-height: 83px;
   line-height: 83px;
-
   font-size: 30px;
   font-weight: lighter;
 }
@@ -730,6 +835,7 @@ a {
 }
 
 /* Group 2 */
+
 @media (min-width: 400px) and (max-width: 599px) {
   .project-header > div {
     line-height: 41px;
@@ -741,6 +847,7 @@ a {
     text-align: left;
   }
 }
+
 .table td,
 .table th {
   padding: 8px;

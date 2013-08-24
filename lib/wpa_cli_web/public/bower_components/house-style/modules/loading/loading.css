@@ -1,0 +1,49 @@
+.loading {
+  display: inline-block;
+  background: transparent url('spinner.svg') no-repeat;
+  background-size: 100% 100%;
+
+  animation-name: loading;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  transition: opacity 1s;
+}
+
+.loading.is-inactive {
+  opacity: 0;
+}
+
+.loading.is-active {
+  opacity: 1;
+}
+
+.loading-32 {
+  width: 32px;
+  height: 32px;
+  margin: 1px;
+}
+
+.loading-20 {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+}
+
+.loading-16 {
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+}
+
+.loading-13 {
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+}
+
+@keyframes loading {
+   from { transform: rotate(0deg); }
+   to   { transform: rotate(360deg); }
+}
