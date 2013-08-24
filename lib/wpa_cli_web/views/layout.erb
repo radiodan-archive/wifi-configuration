@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Wi-Fi Configuration</title>
+    <link rel="stylesheet" href="/bower_components/house-style/house-style.min.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="grid">
+        <div class="grid-col grid-10">
+          <span class="masterbrand">BBC</span>
+          <span class="dept">Radiodan</span>
+        </div>
+        <div class="grid-col grid-2"><%= @host %></div>
+      </div><!-- .grid -->
+    </header>
+    <div class="grid">
+      <div class="project-header with-bordergrid-col grid-12 clearfix">
+        <div>
+          Wi-Fi Configuration
+        </div>
+      </div>
+    </div><!-- .grid -->
+    <div class="grid">
+    <%= yield %>
+    </div>
+  </body>
+</html>

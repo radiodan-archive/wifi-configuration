@@ -7,7 +7,8 @@ class WpaCliWeb < Sinatra::Base
 
   configure do
     set :method_override, true
-    set :public_folder, File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
+    set :public_folder,   File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
+    set :views,           File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'views'))
   end
 
   def wpa_cli_client
@@ -36,74 +37,6 @@ class WpaCliWeb < Sinatra::Base
           access.</p>
        </body>
     </html>
-    eos
-  end
-
-  template :layout do
-    <<-eos
-      <html>
-        <head>
-          <title>Wi-Fi Configuration</title>
-          <link rel="stylesheet" href="/bower_components/house-style/house-style.min.css">
-        </head>
-        <body>
-          <header class="masthead">
-            <div class="grid">
-              <div class="grid-col grid-10">
-                <span class="masterbrand">BBC</span>
-                <span class="dept">Radiodan</span>
-              </div>
-              <div class="grid-col grid-2"><%= @host %></div>
-            </div><!-- .grid -->
-          </header>
-          <div class="grid">
-            <div class="project-header with-bordergrid-col grid-12 clearfix">
-              <div>
-                Wi-Fi Configuration
-              </div>
-            </div>
-          </div><!-- .grid -->
-          <div class="grid">
-          <%= yield %>
-          </div>
-        </body>
-      </html>
-    eos
-  end
-
-  template :networks do
-    <<-eos
-      <table class="table grid-col grid-12">
-        <tr>
-          <th>Name</th>
-          <th>Connect</th>
-        </tr>
-      <% @access_points.each do |ap| %>
-        <tr>
-          <td><%= ap.ssid %></td>
-          <td>
-            <form method="post" action="/networks">
-              <input type="hidden" name="ssid" value="<%= ap.ssid %>" />
-              <input class="btn btn-with-text" type="submit" value="Connect" />
-            </form>
-          </td>
-        </tr>
-      <% end %>
-      </table>
-    eos
-  end
-
-  template :networks_edit do
-    <<-eos
-      <h1 class="grid-col grid-12"><%= @ssid %></h1>
-      <form method="post" action="/networks/<%= @id %>">
-        <input type="hidden" name="_method" value="put" />
-        <input type="hidden" name="ssid" value="<%= @ssid %>" />
-        <label for="password">
-          Password: <input type="text" name="password" />
-        </label>
-        <input class="btn btn-with-text" type="submit" value="Save" />
-      </form>
     eos
   end
 
