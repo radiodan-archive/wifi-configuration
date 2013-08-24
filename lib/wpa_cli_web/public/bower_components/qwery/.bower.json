@@ -1,0 +1,14 @@
+{
+  "name": "qwery",
+  "homepage": "https://github.com/ded/qwery",
+  "version": "3.4.1",
+  "_release": "3.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.4.1",
+    "commit": "ffc2f2d03b7691744dca7c0509d8fd2db204f08c"
+  },
+  "_source": "git://github.com/ded/qwery.git",
+  "_target": "~3.4.1",
+  "_direct": true
+}

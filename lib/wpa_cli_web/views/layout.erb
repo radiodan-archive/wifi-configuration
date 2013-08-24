@@ -23,5 +23,75 @@
     <div class="grid">
     <%= yield %>
     </div>
+  <script src="/bower_components/reqwest/reqwest.min.js"></script>
+  <script src="/bower_components/qwery/qwery.min.js"></script>
+  <script>
+    function parseTimeStringToMs(time) {
+      if (time.indexOf('s') > -1) {
+        return parseInt( time.replace('s', '') ) * 1000;
+      } else if (time.indexOf('m') > -1) {
+        return parseInt( time.replace('m', '') ) * 60 * 1000;
+      } else if (/^\d+$/.test(time) > -1) {
+        return time;
+      }
+    };
+
+    function addLoading(el) {
+      el.insertAdjacentHTML(
+        'beforebegin',
+        '<div class="loading-text transient is-inactive"><span class="loading loading-20"></span></div>'
+      );
+    };
+
+    function showLoading(interval) {
+      var loading = qwery('.loading-text')[0];
+      loading.className = loading.className.replace('is-inactive', 'is-active');
+      if (interval) {
+        window.setTimeout(
+          function () { hideLoading(); },
+          interval
+        );
+      }
+    };
+
+    function hideLoading() {
+      var loading = qwery('.loading-text')[0];
+      loading.className = loading.className.replace('is-active', 'is-inactive');
+    };
+
+    function update(el, url) {
+      showLoading( /* parseTimeStringToMs('1s') */ );
+      reqwest({
+        url: url,
+        method: 'get',
+        type: 'html',
+
+      }).then(function (data) {
+        el.innerHTML = data;
+        hideLoading();
+      });
+    };
+
+    var updateables = qwery('[data-updateable]'),
+        updateable,
+        url,
+        interval,
+        promise;
+    for (var i = 0, len = updateables.length; i < len; i++) {
+      updateable = updateables[i];
+      url = window.location.toString();
+      if (updateable.getAttribute('data-updateable-interval')) {
+        interval = parseTimeStringToMs(
+                      updateable.getAttribute('data-updateable-interval')
+                  );
+      } else {
+        interval = 10000;
+      }
+
+      addLoading(updateable);
+
+      window.setInterval( function () { update(updateable, url); }, interval);
+    }
+  </script>
   </body>
 </html>
