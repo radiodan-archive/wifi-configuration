@@ -3,11 +3,11 @@
   "dependencies": {
     "normalize-css": "~2.1.2"
   },
-  "_release": "7294cb08b6",
+  "_release": "a63177ae40",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "7294cb08b6b5dea9aee23a72a7bd846c5761635b"
+    "commit": "a63177ae4027c3f64771b3cef4977d0cac584de9"
   },
   "_source": "/Users/andrew/Projects/bbc/house-style",
   "_target": "*"

@@ -657,16 +657,6 @@ a {
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-.loading.is-inactive {
-  opacity: 0;
-}
-
-.loading.is-active {
-  opacity: 1;
 }
 
 .loading-32 {
@@ -854,4 +844,17 @@ a {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #eee;
+}
+
+.transient {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.transient.is-inactive {
+  opacity: 0;
+}
+
+.transient.is-active {
+  opacity: 1;
 }

@@ -9,16 +9,6 @@
   animation-duration: 0.9s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-
-  transition: opacity 1s;
-}
-
-.loading.is-inactive {
-  opacity: 0;
-}
-
-.loading.is-active {
-  opacity: 1;
 }
 
 .loading-32 {

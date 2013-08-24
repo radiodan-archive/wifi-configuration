@@ -1,0 +1,11 @@
+.transient {
+  transition: opacity 1s;
+}
+
+.transient.is-inactive {
+  opacity: 0;
+}
+
+.transient.is-active {
+  opacity: 1;
+}
