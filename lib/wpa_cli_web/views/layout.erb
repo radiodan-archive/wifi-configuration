@@ -72,6 +72,9 @@
       });
     };
 
+    /*
+      Replace content in page tagged as "updateable"
+    */
     var updateables = qwery('[data-updateable]'),
         updateable,
         url,
@@ -92,6 +95,44 @@
 
       window.setInterval( function () { update(updateable, url); }, interval);
     }
+
+    /*
+      TODO: Work out if this code is needed since on success
+            the config app will not run.
+    */
+    var reloader = qwery('[data-polling]');
+    if (reloader.length > 0) {
+      reloader = reloader[0];
+      var delay = parseTimeStringToMs(
+                    reloader.getAttribute('data-polling-delay')
+                  ),
+          interval = parseTimeStringToMs( reloader.getAttribute('data-polling-interval') ),
+          endpoint = reloader.getAttribute('data-polling-endpoint'),
+          action   = reloader.getAttribute('data-polling-action');
+
+      // wait a delay
+      window.setTimeout(
+        function () {
+          // Then start polling
+          window.setInterval(
+            function () {
+              reqwest({
+                method: 'get',
+                url: endpoint,
+                type: 'html'
+              }).then(function () {
+                // when it succeeds
+                window.location = action;
+              })
+            },
+            interval
+          )
+        },
+        delay
+      );
+    }
+    */
+
   </script>
   </body>
 </html>
