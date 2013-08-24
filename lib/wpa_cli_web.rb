@@ -68,4 +68,8 @@ class WpaCliWeb < Sinatra::Base
   get '/restart' do
     erb :restart
   end
+
+  post '/restart' do
+    erb :restarting
+  end
 end
