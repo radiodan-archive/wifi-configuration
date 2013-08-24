@@ -102,7 +102,7 @@ class WpaCliWeb < Sinatra::Base
         <label for="password">
           Password: <input type="text" name="password" />
         </label>
-        <input type="submit" value="Save" />
+        <input class="btn btn-with-text" type="submit" value="Save" />
       </form>
     eos
   end
