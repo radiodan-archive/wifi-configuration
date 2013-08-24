@@ -66,6 +66,6 @@ class WpaCliWeb < Sinatra::Base
   end
 
   get '/restart' do
-    "Restart for these changes to take effect"
+    erb :restart
   end
 end
