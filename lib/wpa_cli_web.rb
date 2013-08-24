@@ -57,6 +57,13 @@ class WpaCliWeb < Sinatra::Base
             </div><!-- .grid -->
           </header>
           <div class="grid">
+            <div class="project-header with-bordergrid-col grid-12 clearfix">
+              <div>
+                Wi-Fi Configuration
+              </div>
+            </div>
+          </div><!-- .grid -->
+          <div class="grid">
           <%= yield %>
           </div>
         </body>
