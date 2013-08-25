@@ -1,0 +1,19 @@
+<table class="table"
+       data-updateable
+       data-updateable-interval="5s">
+  <tr>
+    <th>Name</th>
+    <th>Connect</th>
+  </tr>
+<% @access_points.each do |ap| %>
+  <tr>
+    <td><%= ap.ssid %></td>
+    <td>
+      <form method="post" action="/networks">
+        <input type="hidden" name="ssid" value="<%= ap.ssid %>" />
+        <input class="btn btn-with-text" type="submit" value="Connect" />
+      </form>
+    </td>
+  </tr>
+<% end %>
+</table>

@@ -30,7 +30,11 @@ class WpaCliWeb < Sinatra::Base
   get '/access_points' do
     access_point_list = AccessPointList.new(wpa_cli_client)
     @access_points = access_point_list.access_points
-    erb :access_points, :layout => !request.xhr?
+    if request.xhr?
+      erb :access_points_list, :layout => false
+    else
+      erb :access_points
+    end
   end
 
   post '/networks' do

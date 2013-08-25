@@ -1,19 +1,5 @@
-<table class="table grid-col grid-12"
-       data-updateable
-       data-updateable-interval="5s">
-  <tr>
-    <th>Name</th>
-    <th>Connect</th>
-  </tr>
-<% @access_points.each do |ap| %>
-  <tr>
-    <td><%= ap.ssid %></td>
-    <td>
-      <form method="post" action="/networks">
-        <input type="hidden" name="ssid" value="<%= ap.ssid %>" />
-        <input class="btn btn-with-text" type="submit" value="Connect" />
-      </form>
-    </td>
-  </tr>
-<% end %>
-</table>
+<div class="panel grid-col grid-12">
+  <h2 class="hd">Available wireless networks</h2>
+  <p class="intro">To connect your Radiodan to the internet, select a Wi-Fi network from the list.</p>
+  <%= erb :access_points_list %>
+</div><!-- .grid-col .panel -->
