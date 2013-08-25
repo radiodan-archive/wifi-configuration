@@ -6,9 +6,16 @@ class WpaCliWeb < Sinatra::Base
   include WpaCliRuby
 
   configure do
+    set :product_name,    "Radiodan"
     set :method_override, true
     set :public_folder,   File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
     set :views,           File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'views'))
+  end
+
+  helpers do
+    def product_name
+      settings.product_name
+    end
   end
 
   def wpa_cli_client
