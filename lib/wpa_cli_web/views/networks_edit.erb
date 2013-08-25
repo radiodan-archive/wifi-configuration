@@ -1,9 +1,15 @@
-<h1 class="grid-col grid-12"><%= @ssid %></h1>
-<form method="post" action="/networks/<%= @id %>">
-  <input type="hidden" name="_method" value="put" />
-  <input type="hidden" name="ssid" value="<%= @ssid %>" />
-  <label for="password">
-    Password: <input type="text" name="password" />
-  </label>
-  <input class="btn btn-with-text" type="submit" value="Save" />
-</form>
+<div class="panel grid-col grid-12">
+  <h1 class="hd">Connect to network <%= @ssid %></h1>
+  <p class="intro">To connect your <%= product_name %> to the Wi-Fi network <%= @ssid %>, enter the password below.</p>
+  <p>If <%= @ssid %> has no password, leave it blank.</p>
+  <form method="post" action="/networks/<%= @id %>">
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name="ssid" value="<%= @ssid %>" />
+    <label for="password">
+      Password: <input type="text" name="password" />
+    </label>
+    <p>
+      <input class="btn btn-with-text" type="submit" value="Save" />
+    </p>
+  </form>
+</div><!-- .panel.grid-col -->
