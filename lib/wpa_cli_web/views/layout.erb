@@ -6,15 +6,19 @@
       table {
         width: 100%;
       }
+
+      .hostname {
+        text-align: right;
+      }
     </style>
   </head>
   <body>
     <header class="masthead">
       <div class="grid">
-        <div class="grid-col grid-10">
+        <div class="grid-col grid-8">
           <span class="dept"><%= product_name %></span>
         </div>
-        <div class="grid-col grid-2"><%= @host %></div>
+        <div class="hostname grid-col grid-4"><%= @host %></div>
       </div><!-- .grid -->
     </header>
     <div class="grid">
