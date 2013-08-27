@@ -8,6 +8,7 @@ class AccessPointList
 
   def access_points
     @access_points.
+      reject { |network| network.ssid.nil? }.
       group_by {|network| network.ssid}.
       map {|ssid, network_group| network_group}.
       map {|network_group| network_group.sort_by { |network| network.signal_level}.reverse.take(1)}.
