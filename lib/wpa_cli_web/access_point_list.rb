@@ -7,12 +7,25 @@ class AccessPointList
   end
 
   def access_points
-    @access_points.
-      group_by {|network| network.ssid}.
-      map {|ssid, network_group| network_group}.
+      strongest_unique_ssids_sorted_alphabetically
+  end
+
+  def strongest_unique_ssids_sorted_alphabetically
+    strongest_unique_ssids.
+      sort_by { |network| network.ssid }
+  end
+
+  def strongest_unique_ssids
+    network_groups.
       map {|network_group| network_group.sort_by { |network| network.signal_level}.reverse.take(1)}.
-      flatten.
-      sort_by { |network| network.signal_level }.
-      reverse
+      flatten
+  end
+
+  def network_groups
+    access_points_grouped_by_ssid.map {|ssid, network_group| network_group}
+  end
+
+  def access_points_grouped_by_ssid
+    @access_points.group_by {|network| network.ssid}
   end
 end
