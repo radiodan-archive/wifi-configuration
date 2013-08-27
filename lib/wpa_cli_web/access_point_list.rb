@@ -12,7 +12,6 @@ class AccessPointList
       map {|ssid, network_group| network_group}.
       map {|network_group| network_group.sort_by { |network| network.signal_level}.reverse.take(1)}.
       flatten.
-      sort_by { |network| network.signal_level }.
-      reverse
+      sort_by { |network| network.ssid }
   end
 end
