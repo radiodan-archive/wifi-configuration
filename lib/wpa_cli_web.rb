@@ -81,6 +81,7 @@ class WpaCliWeb < Sinatra::Base
   end
 
   post '/restart' do
+    `sudo reboot` if ENV['RACK_ENV'] == "production"
     erb :restarting
   end
 end
