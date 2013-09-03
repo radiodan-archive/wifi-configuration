@@ -6,7 +6,6 @@ require_relative '../../lib/wpa_cli_web/access_point_list.rb'
 describe AccessPointList do
   before do
     mock_wrapper = stub()
-    mock_wrapper.expects(:scan).returns("Selected interface 'wlan0'\nOK\n")
     response = <<-eos
 Selected interface 'wlan0'
 bssid / frequency / signal level / flags / ssid

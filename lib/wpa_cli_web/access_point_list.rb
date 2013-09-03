@@ -1,13 +1,15 @@
 class AccessPointList
   include WpaCliRuby
 
+  # Initialize with scan results. This assumes that cli_client.scan()
+  # has been called elsewhere. When this application is run with the
+  # wifi interface in AP mode, calling scan() is destructive.
   def initialize(cli_client = WpaCli.new)
-    cli_client.scan
     @access_points = cli_client.scan_results
   end
 
   def access_points
-      strongest_unique_ssids_sorted_alphabetically
+    strongest_unique_ssids_sorted_alphabetically
   end
 
   def strongest_unique_ssids_sorted_alphabetically
