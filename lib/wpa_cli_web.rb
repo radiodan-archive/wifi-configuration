@@ -13,7 +13,7 @@ class WpaCliWeb < Sinatra::Base
 
   helpers do
     def product_name
-      ENV['wifi_config_name'] || "Raspberry Pi Wi-Fi"
+      ENV['APPLICATION_NAME'] || ENV['application_name'] || "Raspberry Pi Wi-Fi"
     end
   end
 
