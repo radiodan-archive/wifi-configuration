@@ -10,5 +10,5 @@ rackup_file = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'w
 argv = ARGV
 argv << ["-R", rackup_file] unless ARGV.include?("-R")
 argv << ["-p", "3000"] unless ARGV.include?("-p")
-argv << ["-e", "production"] unless ARGV.include?("-p")
+argv << ["-e", "production"] unless ARGV.include?("-e")
 Thin::Runner.new(argv.flatten).run!
