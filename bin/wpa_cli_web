@@ -2,13 +2,22 @@
 
 require 'thin'
 
+argv = ARGV
+argv << ["-p", "3000"] unless ARGV.include?("-p")
+
+# Set RACK_ENV based on command line parameters
+# so it's available for Sinatra application
+if ARGV.include?("-e")
+  ENV['RACK_ENV'] = ARGV[ ARGV.index('-e') + 1 ]
+else
+  argv << ["-e", "production"]
+  ENV['RACK_ENV'] = "production"
+end
+
 # WpaCliWeb daemon command line interface script.
 # Run wpa_cli_web -h to get more usage.
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'wpa_cli_web.rb'))
 rackup_file = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'wpa_cli_web', 'config.ru'))
 
-argv = ARGV
 argv << ["-R", rackup_file] unless ARGV.include?("-R")
-argv << ["-p", "3000"] unless ARGV.include?("-p")
-argv << ["-e", "production"] unless ARGV.include?("-e")
 Thin::Runner.new(argv.flatten).run!
