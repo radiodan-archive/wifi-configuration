@@ -14,7 +14,7 @@ class AccessPointList
 
   def strongest_unique_ssids_sorted_alphabetically
     strongest_unique_ssids.
-      sort_by { |network| network.ssid }
+      sort_by { |network| network.ssid.downcase }
   end
 
   def strongest_unique_ssids
