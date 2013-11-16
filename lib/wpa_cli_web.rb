@@ -5,23 +5,29 @@ require_relative 'wpa_cli_web/access_point_list'
 class WpaCliWeb < Sinatra::Base
   include WpaCliRuby
 
+  def self.wpa_cli_client
+    if settings.development?
+      WpaCli.new(DummyWpaCliWrapper.new)
+    else
+      WpaCli.new
+    end
+  end
+
   configure do
-    set :method_override, true
-    set :public_folder,   File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
-    set :views,           File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'views'))
+    set :method_override,   true
+    set :public_folder,     File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'public'))
+    set :views,             File.expand_path(File.join(File.dirname(__FILE__), 'wpa_cli_web', 'views'))
+    set :wpa_cli_client,    wpa_cli_client
+    set :access_point_list, AccessPointList.new(settings.wpa_cli_client)
   end
 
   helpers do
     def product_name
       ENV['APPLICATION_NAME'] || ENV['application_name'] || "Raspberry Pi Wi-Fi"
     end
-  end
 
-  def wpa_cli_client
-    if ENV['RACK_ENV'] == "development"
-      WpaCli.new(DummyWpaCliWrapper.new)
-    else
-      WpaCli.new
+    def wpa_cli_client
+      settings.wpa_cli_client
     end
   end
 
@@ -34,8 +40,7 @@ class WpaCliWeb < Sinatra::Base
   end
 
   get '/access_points' do
-    access_point_list = AccessPointList.new(wpa_cli_client)
-    @access_points = access_point_list.access_points
+    @access_points = settings.access_point_list.access_points
     if request.xhr?
       erb :access_points_list, :layout => false
     else
