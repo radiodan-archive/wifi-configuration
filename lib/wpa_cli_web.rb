@@ -6,10 +6,12 @@ class WpaCliWeb < Sinatra::Base
   include WpaCliRuby
 
   def self.wpa_cli_client
-    if settings.development?
-      WpaCli.new(DummyWpaCliWrapper.new)
-    else
+    raise 'wpa_cli not available' if settings.production? && !WpaCliWrapper.available?
+
+    if WpaCliWrapper.available?
       WpaCli.new
+    else
+      WpaCli.new(DummyWpaCliWrapper.new)
     end
   end
 
