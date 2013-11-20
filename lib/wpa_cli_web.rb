@@ -71,10 +71,10 @@ class WpaCliWeb < Sinatra::Base
     ssid = params[:ssid]
     password = params[:password]
     wpa_cli_client.set_network(id, "ssid", ssid)
-    if password
-      wpa_cli_client.set_network(id, "psk", password)
+    if password.empty?
+      wpa_cli_client.set_network(id, "key_mgmt", :NONE)
     else
-      wpa_cli_client.set_network(id, "key_mgmt", "NONE")
+      wpa_cli_client.set_network(id, "psk", password)
     end
     wpa_cli_client.set_network(id, "disabled", 0)
     wpa_cli_client.save_config
