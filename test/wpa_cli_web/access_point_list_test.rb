@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'wpa_cli_ruby'
-require 'mocha'
+require 'mocha/mini_test'
 require_relative '../../lib/wpa_cli_web/access_point_list.rb'
 
 describe AccessPointList do
