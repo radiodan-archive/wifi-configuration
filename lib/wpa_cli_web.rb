@@ -76,7 +76,7 @@ class WpaCliWeb < Sinatra::Base
     else
       wpa_cli_client.set_network(id, "psk", password)
     end
-    wpa_cli_client.set_network(id, "disabled", 0)
+    wpa_cli_client.set_network(id, "disabled", :"0")
     wpa_cli_client.save_config
 
     redirect "/restart"
