@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "wpa_cli_web"
-  spec.version       = "0.0.16"
+  spec.version       = "0.0.17"
   spec.authors       = ["Chris Lowis", "Andrew Nicolaou", "Dan Nuttall"]
   spec.email         = ["andrew.nicolaou@bbc.co.uk"]
   spec.description   = %q{Web interface for configuring wifi using wpa_cli}
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "sinatra", "~> 1.4.5"
-  spec.add_dependency "wpa_cli_ruby", ">= 0.0.2"
+  spec.add_dependency "wpa_cli_ruby", ">= 0.0.3"
   spec.add_dependency "thin", "~> 1.5.1"
 
   spec.add_development_dependency "bundler", "~> 1.3"
