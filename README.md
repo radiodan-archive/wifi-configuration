@@ -7,7 +7,7 @@ Wifi on a Raspberry Pi when a keyboard and monitor is difficult to
 connect (in embedded applications for example).
 
 ## Installation
-
+    $ sudo aptitude install ruby1.9.1-dev
     $ gem install wpa_cli_web
 
 ## Usage
